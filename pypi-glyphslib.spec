@@ -4,13 +4,13 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-glyphslib
-Version  : 6.2.2
-Release  : 1
-URL      : https://files.pythonhosted.org/packages/00/66/ea8c20168200afbe1f7e2a87ac2bfe413ad2c3ab94f0d362aaa9630aeecc/glyphsLib-6.2.2.tar.gz
-Source0  : https://files.pythonhosted.org/packages/00/66/ea8c20168200afbe1f7e2a87ac2bfe413ad2c3ab94f0d362aaa9630aeecc/glyphsLib-6.2.2.tar.gz
+Version  : 6.2.3
+Release  : 2
+URL      : https://files.pythonhosted.org/packages/2b/ac/ed14cfa43d07b9135cf0bfbf09820e4d3c9e1c274f65c39030a04c427fdd/glyphsLib-6.2.3.tar.gz
+Source0  : https://files.pythonhosted.org/packages/2b/ac/ed14cfa43d07b9135cf0bfbf09820e4d3c9e1c274f65c39030a04c427fdd/glyphsLib-6.2.3.tar.gz
 Summary  : A bridge from Glyphs source files (.glyphs) to UFOs
 Group    : Development/Tools
-License  : Apache-2.0
+License  : Apache-2.0 MIT
 Requires: pypi-glyphslib-bin = %{version}-%{release}
 Requires: pypi-glyphslib-license = %{version}-%{release}
 Requires: pypi-glyphslib-python = %{version}-%{release}
@@ -79,10 +79,10 @@ python3 components for the pypi-glyphslib package.
 
 
 %prep
-%setup -q -n glyphsLib-6.2.2
-cd %{_builddir}/glyphsLib-6.2.2
+%setup -q -n glyphsLib-6.2.3
+cd %{_builddir}/glyphsLib-6.2.3
 pushd ..
-cp -a glyphsLib-6.2.2 buildavx2
+cp -a glyphsLib-6.2.3 buildavx2
 popd
 
 %build
@@ -90,7 +90,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1683818113
+export SOURCE_DATE_EPOCH=1688571338
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -116,6 +116,7 @@ export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-glyphslib
 cp %{_builddir}/glyphsLib-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/pypi-glyphslib/7df059597099bb7dcf25d2a9aedfaf4465f72d8d || :
+cp %{_builddir}/glyphsLib-%{version}/Lib/glyphsLib/data/GlyphData_LICENSE %{buildroot}/usr/share/package-licenses/pypi-glyphslib/3d41934668818166425e722040957ab9410162f8 || :
 cp %{_builddir}/glyphsLib-%{version}/tests/data/designspace/roboto/LICENSE %{buildroot}/usr/share/package-licenses/pypi-glyphslib/7df059597099bb7dcf25d2a9aedfaf4465f72d8d || :
 pip install --root=%{buildroot} --no-deps --ignore-installed dist/*.whl
 echo ----[ mark ]----
@@ -141,6 +142,7 @@ popd
 
 %files license
 %defattr(0644,root,root,0755)
+/usr/share/package-licenses/pypi-glyphslib/3d41934668818166425e722040957ab9410162f8
 /usr/share/package-licenses/pypi-glyphslib/7df059597099bb7dcf25d2a9aedfaf4465f72d8d
 
 %files python

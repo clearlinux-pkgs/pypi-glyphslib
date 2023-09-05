@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-glyphslib
-Version  : 6.3.0
-Release  : 5
-URL      : https://files.pythonhosted.org/packages/e6/17/542c651b6a6e4a93629fc84671505ef8c37aa4549c72f5d91b37296ea621/glyphsLib-6.3.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/e6/17/542c651b6a6e4a93629fc84671505ef8c37aa4549c72f5d91b37296ea621/glyphsLib-6.3.0.tar.gz
+Version  : 6.4.0
+Release  : 6
+URL      : https://files.pythonhosted.org/packages/0b/41/abd7189b73ff1ca315e8c8e90b849b3481878869392077f5f5707df677a1/glyphsLib-6.4.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/0b/41/abd7189b73ff1ca315e8c8e90b849b3481878869392077f5f5707df677a1/glyphsLib-6.4.0.tar.gz
 Summary  : A bridge from Glyphs source files (.glyphs) to UFOs
 Group    : Development/Tools
 License  : Apache-2.0 MIT
@@ -34,7 +34,7 @@ BuildRequires : pypi-virtualenv
 |CI Build Status| |PyPI Version| |Codecov| |Gitter Chat|
 glyphsLib
 =========
-This Python 3.7+ library provides a bridge from Glyphs source files (.glyphs) to
+This Python library provides a bridge from Glyphs source files (.glyphs) to
 UFOs and Designspace files via `defcon <https://github.com/typesupply/defcon/>`__ and `designspaceLib <https://github.com/fonttools/fonttools>`__.
 
 %package bin
@@ -79,10 +79,10 @@ python3 components for the pypi-glyphslib package.
 
 
 %prep
-%setup -q -n glyphsLib-6.3.0
-cd %{_builddir}/glyphsLib-6.3.0
+%setup -q -n glyphsLib-6.4.0
+cd %{_builddir}/glyphsLib-6.4.0
 pushd ..
-cp -a glyphsLib-6.3.0 buildavx2
+cp -a glyphsLib-6.4.0 buildavx2
 popd
 
 %build
@@ -90,7 +90,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1691077215
+export SOURCE_DATE_EPOCH=1693931563
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib

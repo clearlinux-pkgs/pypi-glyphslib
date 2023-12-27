@@ -7,7 +7,7 @@
 #
 Name     : pypi-glyphslib
 Version  : 6.6.0
-Release  : 11
+Release  : 12
 URL      : https://files.pythonhosted.org/packages/63/81/76f6a8f82164f7c81123a1494791d7a3c74e4411d36acbbbb220d2d78004/glyphsLib-6.6.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/63/81/76f6a8f82164f7c81123a1494791d7a3c74e4411d36acbbbb220d2d78004/glyphsLib-6.6.0.tar.gz
 Summary  : A bridge from Glyphs source files (.glyphs) to UFOs

@@ -1,5 +1,5 @@
 PKG_NAME := pypi-glyphslib
-URL = https://files.pythonhosted.org/packages/63/81/76f6a8f82164f7c81123a1494791d7a3c74e4411d36acbbbb220d2d78004/glyphsLib-6.6.0.tar.gz
+URL = https://files.pythonhosted.org/packages/0a/62/4a4e1475dbd8c7a6f9c9ba4ddfedb08e111c00da8ebb9cf541f5ce1db92f/glyphsLib-6.6.1.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common

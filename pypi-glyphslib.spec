@@ -6,10 +6,10 @@
 # autospec commit: f35655a
 #
 Name     : pypi-glyphslib
-Version  : 6.8.1
-Release  : 24
-URL      : https://files.pythonhosted.org/packages/8a/19/93a4e8e71645d101437f2943981b8dae2abf2df58abcd0961481e2fceb41/glyphslib-6.8.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/8a/19/93a4e8e71645d101437f2943981b8dae2abf2df58abcd0961481e2fceb41/glyphslib-6.8.1.tar.gz
+Version  : 6.8.2
+Release  : 25
+URL      : https://files.pythonhosted.org/packages/ac/55/c8bdcd28da081eae6f244cf91355a6792c0132380b9bcaa6665530722ec8/glyphslib-6.8.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/ac/55/c8bdcd28da081eae6f244cf91355a6792c0132380b9bcaa6665530722ec8/glyphslib-6.8.2.tar.gz
 Summary  : A bridge from Glyphs source files (.glyphs) to UFOs
 Group    : Development/Tools
 License  : Apache-2.0 MIT
@@ -78,10 +78,10 @@ python3 components for the pypi-glyphslib package.
 
 
 %prep
-%setup -q -n glyphslib-6.8.1
-cd %{_builddir}/glyphslib-6.8.1
+%setup -q -n glyphslib-6.8.2
+cd %{_builddir}/glyphslib-6.8.2
 pushd ..
-cp -a glyphslib-6.8.1 buildavx2
+cp -a glyphslib-6.8.2 buildavx2
 popd
 
 %build
@@ -89,7 +89,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1723766436
+export SOURCE_DATE_EPOCH=1724363241
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
